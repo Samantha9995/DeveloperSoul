@@ -1,5 +1,5 @@
 import 'package:adv_basics/data/question.dart';
-import 'package:adv_basics/question_summary.dart';
+import 'package:adv_basics/models/answer_type.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -9,29 +9,30 @@ class ResultsScreen extends StatelessWidget {
   final List<String> chosenAnswers;
   final void Function() onRestartScreen;
 
-  List<Map<String, Object>> get summaryData {
-    final List<Map<String, Object>> summary = [];
+  Map<String, String> get summaryData {
+    final Map<String, String> summary = {};
+    double summaryScore = 0;
 
     for (var i = 0; i < chosenAnswers.length; i++) {
-        summary.add({
-          'question_index': i,
-          'question': questions[i].text,
-          'correct_answer': questions[i].answers[0],
-          'user_answer': chosenAnswers[i]
-        });
+      final Map<String, int> listOfAnswers = questions[i].answers;
+      final int? score = listOfAnswers.containsKey(chosenAnswers[i]) ? listOfAnswers[chosenAnswers[i]] : 0;
+
+      if (score != null && score > 0) {
+        summaryScore += score;
+      } 
     }
+
+    var answerType = AnswerType(summaryScore);
+
+    summary['score'] = summaryScore.toString();
+    summary['type'] = answerType.answer;
+    summary['description'] = answerType.answerDescption;
 
     return summary;
   }
 
   @override
   Widget build(BuildContext context) {
-    final numTotalQuestions = questions.length;
-    final numCorrectQuestions = summaryData
-    .where(
-      (data) => data['user_answer'] == data['correct_answer']
-    )
-    .length;
 
     return SizedBox(
       width: double.infinity,
@@ -40,30 +41,41 @@ class ResultsScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('You answered $numCorrectQuestions out of $numTotalQuestions question correctly!',
+            Text('You are ${summaryData['type']}!',
             textAlign: TextAlign.center,
             style: GoogleFonts.lato(
-              color: const Color.fromARGB(255, 193, 145, 237),
+              color: const Color.fromARGB(255, 255, 255, 255),
               fontWeight: FontWeight.bold,
-              fontSize: 18
+              fontSize: 24
             )),
             const SizedBox(height: 30),
-            QuestionSummary(summaryData),
+            Text(summaryData['description'].toString(),
+            textAlign: TextAlign.center,
+            style: GoogleFonts.lato(
+              color: const Color.fromARGB(255, 255, 255, 255),
+              fontWeight: FontWeight.bold,
+              fontSize: 16
+            )),
             const SizedBox(height: 30),
-            TextButton.icon(
+            OutlinedButton.icon(
                   onPressed: () {
                     onRestartScreen();
                   },
-                  style: TextButton.styleFrom(
-                    foregroundColor: const Color.fromARGB(255, 229, 216, 241), 
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: const Color.fromARGB(255, 255, 255, 255), 
+                    backgroundColor: const Color.fromARGB(55, 98, 134, 241), 
                     textStyle: const TextStyle(
-                       fontSize: 12,
+                       fontSize: 16,
                        fontWeight: FontWeight.bold
-                      )
+                      ),
+                    side: const BorderSide(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      width: 1
+                    ),
                   ),
                   icon: const Icon(Icons.replay),
                   label: const Text('Restart Quiz'),
-                )
+                ),
           ],
         ),
       ),

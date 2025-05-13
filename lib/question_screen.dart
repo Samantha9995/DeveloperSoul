@@ -40,13 +40,13 @@ class _QuestionScreenState extends State<QuestionScreen> {
           Text(currentQuestion.text, 
             textAlign: TextAlign.center,
             style: GoogleFonts.lato(
-              color: const Color.fromARGB(255, 193, 145, 237),
+              color: const Color.fromARGB(255, 255, 255, 255),
               fontWeight: FontWeight.bold,
               fontSize: 24
             )
           ),
           const SizedBox(height: 30),
-          ...currentQuestion.shuffledAnswers.map((answer) {
+          ...currentQuestion.listOfAnswers.map((answer) {
             return AnswerButton(answerText: answer, onPressed: () {
                 answerQuestion(answer);
               },
