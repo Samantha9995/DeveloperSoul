@@ -1,12 +1,14 @@
-
+// Copyright (c) 2025 SADev. All rights reserved.
 import 'package:adv_basics/answer_button.dart';
 import 'package:flutter/material.dart';
 import 'package:adv_basics/data/question.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// This widget displays the question screen of the quiz.
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key, required this.onSelectAnswer});
 
+  // This function is called when an answer is selected.
   final void Function(String answer) onSelectAnswer;
 
   @override
@@ -15,18 +17,23 @@ class QuestionScreen extends StatefulWidget {
   }
 }
 
+// This is the state class for the QuestionScreen widget.
 class _QuestionScreenState extends State<QuestionScreen> {
+  // This variable keeps track of the index of the current question.
   var currentQuestionIndex = 0;
 
+  // This function handles the user selecting an answer.
   void answerQuestion(String selectedAnswer) {
     widget.onSelectAnswer(selectedAnswer);
     setState(() {
+      // Increment the question index to display the next question.
       currentQuestionIndex++;
     });
   }
 
   @override
-  Widget build(context) {
+  Widget build(BuildContext context) {
+    // Get the current question from the list of questions.
     final currentQuestion = questions[currentQuestionIndex];
 
     return SizedBox(

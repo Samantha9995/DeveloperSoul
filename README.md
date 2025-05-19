@@ -1,16 +1,82 @@
-# adv_basics
+# adv_basics - Flutter Quiz App
 
-A new Flutter project.
+## Overview
 
-## Getting Started
+This Flutter project is a simple quiz application designed to test your knowledge and determine your "programmer soul type." It features a clean UI with a start screen, question screen, and a results screen that provides a personalized assessment based on your answers.
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+*   **Interactive Quiz:** Engaging quiz format with multiple-choice questions.
+*   **Dynamic UI:** Utilizes Flutter's widgets to create a responsive and visually appealing interface.
+*   **Personalized Results:** Provides a unique "programmer soul type" based on the quiz results.
+*   **About Page:** Includes an "About the developer" section accessible via a popup menu.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Technologies Used
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+*   **Flutter**
+*   **Dart**
+
+## State Management
+
+This project primarily uses `StatefulWidget` and `setState` for state management. 
+
+## Project Structure
+```
+adv_basics/ 
+├── lib/
+│ ├── data/ 
+│ │ └── question.dart 
+│ ├── models/ 
+│ │ └── answer_type.dart
+│ │ └── quiz_question.dart
+│ ├── question_screen.dart 
+│ ├── quiz.dart
+│ └── results_screen.dart  
+│ ├── main.dart
+│ ├── main_quiz.dart 
+│ ├── answer_button.dart 
+├── assets/ 
+│ └── images/ 
+│ │ └──quiz-logo.png 
+│ │ └──github_icon.png 
+├── pubspec.yaml  
+└── README.md
+```
+
+## Dependencies
+
+*   **flutter:**  Flutter SDK.
+*   **google\_fonts:** For using custom fonts (Lato).
+
+## Installation
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone [repository_url]
+    cd adv_basics
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    flutter pub get
+    ```
+
+3.  **Run the app:**
+
+    ```bash
+    flutter run
+    ```
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+## License
+
+Apache License Version 2.0
+
+## Copyright
+
+Copyright (c) 2025 SADev. All rights reserved.

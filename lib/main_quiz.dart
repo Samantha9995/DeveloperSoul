@@ -1,10 +1,15 @@
+// Copyright (c) 2025 SADev. All rights reserved.
 import 'package:adv_basics/about_me.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// This is the main quiz screen widget.
 class MainQuiz extends StatelessWidget {
+  // This is the constructor for the MainQuiz widget.
+  // It takes a function that starts the quiz as a parameter.
   const MainQuiz(this.startQuiz, {super.key});
 
+  // This function is called when the start quiz button is pressed.
   final void Function() startQuiz;
 
   @override

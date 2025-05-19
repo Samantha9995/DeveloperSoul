@@ -1,18 +1,24 @@
+// Copyright (c) 2025 SADev. All rights reserved.
 import 'package:adv_basics/data/question.dart';
 import 'package:adv_basics/models/answer_type.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// This widget displays the results screen of the quiz.
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({super.key, required this.chosenAnswers, required this.onRestartScreen});
 
+  // This is the list of answers chosen by the user.
   final List<String> chosenAnswers;
+  // This function is called when the restart button is pressed.
   final void Function() onRestartScreen;
 
+  // This getter calculates the summary data for the results screen.
   Map<String, String> get summaryData {
     final Map<String, String> summary = {};
     double summaryScore = 0;
 
+    // Loop through the chosen answers and calculate the score.
     for (var i = 0; i < chosenAnswers.length; i++) {
       final Map<String, int> listOfAnswers = questions[i].answers;
       final int? score = listOfAnswers.containsKey(chosenAnswers[i]) ? listOfAnswers[chosenAnswers[i]] : 0;
@@ -22,8 +28,10 @@ class ResultsScreen extends StatelessWidget {
       } 
     }
 
+    // Determine the answer type based on the score.
     var answerType = AnswerType(summaryScore);
 
+    // Store the score, answer type, and description in the summary map.
     summary['score'] = summaryScore.toString();
     summary['type'] = answerType.answer;
     summary['description'] = answerType.answerDescption;
