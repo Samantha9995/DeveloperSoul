@@ -52,7 +52,7 @@ class AboutMePage extends StatelessWidget {
                     children: [
                       IconButton(
                           icon: Image.asset(
-                            'assets/images/github_icon.png',
+                            'assets/images/github-icon.png',
                             width: 24,
                             height: 24,
                             color: Colors.white,

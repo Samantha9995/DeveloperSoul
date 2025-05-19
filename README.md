@@ -38,7 +38,7 @@ adv_basics/
 ├── assets/ 
 │ └── images/ 
 │ │ └──quiz-logo.png 
-│ │ └──github_icon.png 
+│ │ └──github-icon.png 
 ├── pubspec.yaml  
 └── README.md
 ```
