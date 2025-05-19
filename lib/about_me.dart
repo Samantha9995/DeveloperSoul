@@ -1,5 +1,6 @@
 // import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 // import 'package:get/get.dart';
 // import 'package:url_launcher/url_launcher.dart';
 
@@ -61,14 +62,14 @@ class AboutMePage extends StatelessWidget {
                             // Mark the function as async
                             final Uri url =
                                 Uri.parse('https://github.com/Samantha9995');
-                            // if (await canLaunchUrl(url)) {
-                            //   // Check if the URL can be launched
-                            //   await launchUrl(url); // Launch the URL
-                            // } else {
-                            //   // Handle the error if the URL couldn't be launched
-                            //   logger.e('Could not launch gitURL');
-                            //   // Optionally, show an error message to the user using a SnackBar or AlertDialog
-                            // }
+                            if (await canLaunchUrl(url)) {
+                              // Check if the URL can be launched
+                              await launchUrl(url); // Launch the URL
+                            } else {
+                              // Handle the error if the URL couldn't be launched
+                              print('Could not launch gitURL');
+                              // Optionally, show an error message to the user using a SnackBar or AlertDialog
+                            }
                           }),
                     ],
                   ),
