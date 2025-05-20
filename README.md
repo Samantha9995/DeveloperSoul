@@ -23,11 +23,11 @@ This project is deployed on GitHub Pages and can be accessed at (https://samanth
 This project primarily uses `StatefulWidget` and `setState` for state management. 
 
 ## Prerequisites
-Flutter SDK (>=3.29.3, <4.0.0, includes Dart SDK >=3.7.2, <4.0.0)
-iOS: Xcode (version 12 or higher)
-Android SDK (API level 24 or higher)
-Chrome 135.0.7049.117 (x86_64) or higher
-An IDE like VS Code or Android Studio
+*  Flutter SDK (>=3.29.3, <4.0.0, includes Dart SDK >=3.7.2, <4.0.0)
+*  iOS: Xcode (version 12 or higher)
+*  Android SDK (API level 24 or higher)
+*  Chrome 135.0.7049.117 (x86_64) or higher
+*  An IDE like VS Code or Android Studio
 
 ## Dependencies
 
