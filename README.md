@@ -75,7 +75,7 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 
 ## License
 
-Apache License Version 2.0
+Apache License Version 2.0 
 
 ## Copyright
 
