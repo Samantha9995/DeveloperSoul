@@ -1,8 +1,8 @@
-# adv_basics - Flutter Quiz App
-
-## Overview
+# Developer Soul
 
 This Flutter project is a simple quiz application designed to test your knowledge and determine your "programmer soul type." It features a clean UI with a start screen, question screen, and a results screen that provides a personalized assessment based on your answers.
+
+This project is deployed on GitHub Pages and can be accessed at (https://samantha9995.github.io/DeveloperSoul/).
 
 ## Features
 
