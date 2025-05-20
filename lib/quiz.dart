@@ -1,9 +1,9 @@
 // Copyright (c) 2025 SADev. All rights reserved.
 
-import 'package:adv_basics/data/question.dart';
-import 'package:adv_basics/main_quiz.dart';
-import 'package:adv_basics/question_screen.dart';
-import 'package:adv_basics/results_screen.dart';
+import 'package:developer_soul_quiz/data/question.dart';
+import 'package:developer_soul_quiz/main_quiz.dart';
+import 'package:developer_soul_quiz/question_screen.dart';
+import 'package:developer_soul_quiz/results_screen.dart';
 import 'package:flutter/material.dart';
 
 // This is the main Quiz widget that manages the state and flow of the quiz application.

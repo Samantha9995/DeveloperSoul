@@ -1,5 +1,5 @@
 // Copyright (c) 2025 SADev. All rights reserved.
-import 'package:adv_basics/about_me.dart';
+import 'package:developer_soul_quiz/about_me.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

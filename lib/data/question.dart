@@ -1,4 +1,4 @@
-import 'package:adv_basics/models/quiz_question.dart';
+import 'package:developer_soul_quiz/models/quiz_question.dart';
 
 const questions = [
   QuizQuestion('When you encounter a tricky bug, your first reaction is...?', {

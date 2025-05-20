@@ -1,4 +1,4 @@
-package com.example.adv_basics
+package sadev.developer.soul.quiz
 
 import io.flutter.embedding.android.FlutterActivity
 
