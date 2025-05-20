@@ -22,7 +22,7 @@ This project primarily uses `StatefulWidget` and `setState` for state management
 
 ## Project Structure
 ```
-adv_basics/ 
+developersoul/ 
 ├── lib/
 │ ├── data/ 
 │ │ └── question.dart 
@@ -53,8 +53,8 @@ adv_basics/
 1.  **Clone the repository:**
 
     ```bash
-    git clone [repository_url]
-    cd adv_basics
+    git clone git@github.com:Samantha9995/DeveloperSoul.git
+    cd developer_soul
     ```
 
 2.  **Install dependencies:**
