@@ -4,6 +4,6 @@ import 'package:flutter/material.dart';
 
 // Main function, the entry point of the Flutter application.
 void main() {
-    // Runs the Quiz app.
-    runApp(const Quiz());
+  // Runs the Quiz app.
+  runApp(const Quiz());
 }

@@ -31,5 +31,4 @@ class AnswerType {
       return 'You are a master of "non-action governance" in the programming world, believing that programs and life are the same, going with the flow. \n\nYou may not like to pursue new technologies, but stability and efficiency are never lacking. \n\nSuggestion: Occasionally challenge new frameworks. Maybe you\'ll discover new fun!';
     }
   }
-
 }

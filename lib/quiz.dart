@@ -14,7 +14,6 @@ class Quiz extends StatefulWidget {
   State<Quiz> createState() {
     return _QuizState();
   }
-
 }
 
 // This is the state class for the Quiz widget.
@@ -53,7 +52,6 @@ class _QuizState extends State<Quiz> {
 
   @override
   Widget build(BuildContext context) {
-
     // This widget is displayed based on the current active screen.
     Widget screenWidget = MainQuiz(switchScreen);
 
@@ -62,30 +60,25 @@ class _QuizState extends State<Quiz> {
       screenWidget = QuestionScreen(onSelectAnswer: chooseAnswer);
     } else if (activeScreen == 'results-screen') {
       // If the active screen is the results screen, display the ResultsScreen widget.
-      screenWidget = ResultsScreen(chosenAnswers: selectedAnswers, onRestartScreen: restartQuiz);
+      screenWidget = ResultsScreen(
+          chosenAnswers: selectedAnswers, onRestartScreen: restartQuiz);
     }
 
     // This is the main MaterialApp widget that defines the structure of the app.
     return MaterialApp(
-      // debugShowCheckedModeBanner: false,
-            home: Scaffold(
-                body: Container (
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 17, 56, 186),
-                        Color.fromARGB(255, 109, 190, 237)
-                      ],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight
-                    ),
-                  ),
-                  child: Center (
-                    child: screenWidget,
-                  ),
-                ),
-            )
-        );
+        // debugShowCheckedModeBanner: false,
+        home: Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(colors: [
+            Color.fromARGB(255, 17, 56, 186),
+            Color.fromARGB(255, 109, 190, 237)
+          ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+        ),
+        child: Center(
+          child: screenWidget,
+        ),
+      ),
+    ));
   }
-
 }

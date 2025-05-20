@@ -41,27 +41,26 @@ class _QuestionScreenState extends State<QuestionScreen> {
       child: Container(
         margin: const EdgeInsets.all(40),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-          Text(currentQuestion.text, 
-            textAlign: TextAlign.center,
-            style: GoogleFonts.lato(
-              color: const Color.fromARGB(255, 255, 255, 255),
-              fontWeight: FontWeight.bold,
-              fontSize: 24
-            )
-          ),
-          const SizedBox(height: 30),
-          ...currentQuestion.listOfAnswers.map((answer) {
-            return AnswerButton(answerText: answer, onPressed: () {
-                answerQuestion(answer);
-              },
-            );
-          })
-        ]),
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(currentQuestion.text,
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.lato(
+                      color: const Color.fromARGB(255, 255, 255, 255),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24)),
+              const SizedBox(height: 30),
+              ...currentQuestion.listOfAnswers.map((answer) {
+                return AnswerButton(
+                  answerText: answer,
+                  onPressed: () {
+                    answerQuestion(answer);
+                  },
+                );
+              })
+            ]),
       ),
     );
   }
-
 }
