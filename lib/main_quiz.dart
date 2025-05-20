@@ -15,7 +15,7 @@ class MainQuiz extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return 
-    Container(
+    SizedBox(
       width: double.infinity,
       height: double.infinity,
 

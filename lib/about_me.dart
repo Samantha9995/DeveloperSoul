@@ -67,7 +67,6 @@ class AboutMePage extends StatelessWidget {
                               await launchUrl(url); // Launch the URL
                             } else {
                               // Handle the error if the URL couldn't be launched
-                              print('Could not launch gitURL');
                               // Optionally, show an error message to the user using a SnackBar or AlertDialog
                             }
                           }),
